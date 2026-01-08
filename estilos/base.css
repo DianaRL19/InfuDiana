@@ -1,0 +1,634 @@
+    /* @charset "UTF8";
+
+    /* _______________________________ */
+    /* ______ ESTILOS GENERALES ______ */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    :root {
+        --color-primario: #fff9f1;
+        --color-secundario: #491c1c;
+        --color-letrasClaras: #722e2e;
+        --color-barraMenu: #844a4a;
+        --color-barraMenuHover: #aa6868;
+        --color-texto: #381515;
+        --color-boton: #8d4f4f;
+        --color-fondo-formu: #e698989b;
+        --color-blanco: rgb(255, 255, 255);
+    }
+
+    body {
+        border: 0;
+        box-sizing: border-box;
+        background-color: var(--color-primario);
+        font-size: 16px;
+    }
+
+    h2 {
+        text-align: center;
+        color: var(--color-secundario);
+    }
+
+    /* ______________________ */
+    /* ______ CABECERA ______ */
+
+    #cabeceraDiana {
+        background-color: var(--color-secundario);
+        box-shadow: 3px 3px 9px #89898b6b;
+        color: var(--color-blanco);
+        margin: 0 auto;
+        padding: 10px 10px 28px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        height: 4em;
+    }
+
+    #cabeceraDiana #titulo {
+        font-size: 4vh;
+        margin-top: 10%;
+        margin-left: 55%;
+    }
+
+    .imgTitu {
+        width: 3.5%;
+        position: absolute;
+        left: 1%;
+    }
+
+    .usuarioConectado {
+        padding: 9px 0;
+        position: absolute;
+        top: 9%;
+    }
+
+    #cabeceraDiana ul {
+        width: 70%;
+        margin-left: 7%;
+        margin-top: 0.2%;
+    }
+
+    #cabeceraDiana li {
+        padding: 1% 2%;
+    }
+
+    #cabeceraDiana ul li {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .iniciaSesion,
+    .confPerfil {
+        color: var(--color-blanco);
+        text-decoration: none;
+        position: absolute;
+        padding: 0.5% 1%;
+    }
+
+    .iniciaSesion {
+        right: 6%;
+    }
+
+    .confPerfil {
+        right: 15%;
+    }
+
+    .inicia {
+        margin-top: 0.5%;
+    }
+
+    .iniciaSesion:hover,
+    .confPerfil:hover,
+    li:hover {
+        background-color: var(--color-barraMenu);
+        border-radius: 10px;
+        transition: background-color 0.5s ease-in;
+    }
+
+    /*______ BARRA UBICACION __________*/
+
+    div#barraMenu ul,
+    nav ul,
+    #barraUbicacion ul,
+    #barraUbicacion {
+        list-style: none;
+        padding: 0;
+        border-radius: 0 0 10px 10px;
+        background-color: var(--color-barraMenu);
+    }
+
+    #barraUbicacion {
+        padding: 1px;
+    }
+
+    div#barraMenu li,
+    nav li,
+    #barraUbicacion li {
+        display: inline-block;
+    }
+
+    div#barraMenu a,
+    #barraUbicacion a {
+        display: block;
+        padding: 8px;
+        color: var(--color-blanco);
+    }
+
+    nav a {
+        display: block;
+        font-size: 14px;
+        color: var(--color-blanco);
+        padding: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-blanco);
+    }
+
+    #barraUbicacion a:hover {
+        background-color: var(--color-barraMenuHover);
+        border-radius: 10px;
+        transition: background-color 0.5s ease-in;
+    }
+
+    .ubicacion {
+        color: var(--color-blanco);
+        background-color: var(--color-barraMenu);
+    }
+
+    /*___________*/
+
+    footer {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 1% 0;
+        background-color: var(--color-secundario);
+        color: var(--color-primario);
+    }
+
+    #cabecera {
+        background-color: var(--color-barraMenu);
+        padding: 1%;
+    }
+
+    #cabecera #logo {
+        width: 75px;
+        height: 50px;
+    }
+
+    #cabecera #titulo {
+        font-size: 1.3em;
+        font-style: italic;
+    }
+
+    #pie {
+        background-color: var(--color-barraMenu);
+        color: var(--color-blanco);
+        font-size: 1.5 em;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .error {
+        background-color: white;
+        color: red;
+        border: thin solid red;
+        border-radius: 20px;
+        padding: 3px;
+    }
+
+    /*________ MENSAJE BIENVENIDA _________*/
+
+    .bienvenida {
+        margin-bottom: 2%;
+        color: var(--color-texto);
+        text-align: center;
+    }
+
+    .bienvenida h3 {
+        color: var(--color-letrasClaras);
+    }
+
+    .hojaDecorativa {
+        width: 1.5%;
+    }
+
+    /*________ FORMULARIOS ________*/
+
+    .formularioInicioSesion {
+        background-color: var(--color-fondo-formu);
+        padding: 2%;
+        width: 40%;
+        margin-left: 28%;
+        border-radius: 15px;
+        border: 8px solid var(--color-fondo-formu);
+    }
+
+    hr {
+        border: 1px solid var(--color-boton);
+        margin: 1% 0;
+    }
+
+    .formularioInicioSesion input {
+        margin-bottom: 1%;
+        padding: 1% 2%;
+        border-radius: 5px;
+        border: 2px inset var(--color-boton);
+        font-size: 2vh;
+        margin-left: 33%;
+    }
+
+    .formularioInicioSesion .boton {
+        margin-bottom: 1%;
+        padding: 1% 2%;
+        border-radius: 5px;
+        border: 2px inset var(--color-boton);
+        font-size: 2vh;
+        margin-left: 40%;
+    }
+
+    .formularioInicioSesioninput {
+        margin-bottom: 1%;
+        padding: 0.3% 1%;
+        border-radius: 10px;
+        border: 2px inset var(--color-boton);
+    }
+
+    .boton {
+        background-color: var(--color-boton);
+        color: var(--color-blanco);
+        border: 2px inset var(--color-secundario);
+        font-size: 2.1vh;
+        padding: 0.4% 1%;
+        border-radius: 10px;
+    }
+
+    a.boton {
+        text-decoration: none;
+        color: var(--color-blanco);
+    }
+
+    .boton a:visited {
+        text-decoration: none;
+        color: var(--color-blanco);
+    }
+
+    .boton a:hover {
+        background-color: var(--color-boton);
+        color: var(--color-blanco);
+    }
+
+    .boton:hover {
+        color: var(--color-boton);
+        background-color: rgb(246, 240, 236);
+        border: 2px inset var(--color-boton);
+        transition: background-color 1s ease, border 1s ease;
+    }
+
+    /*_______ FILTRADO USUARIO ________*/
+
+    .formularioFiltrado {
+        background-color: var(--color-fondo-formu);
+        padding: 2%;
+        width: 30%;
+        margin-left: 30%;
+        border-radius: 15px;
+        border: 8px solid var(--color-fondo-formu);
+    }
+
+    legend {
+        background-color: var(--color-primario);
+        padding: 1%;
+        border-radius: 19px;
+        border: 5px solid #eaa6a5;
+    }
+
+    .formularioFiltrado input {
+        padding: 1% 2%;
+        border-radius: 5px;
+        border: 2px inset var(--color-boton);
+        font-size: 2vh;
+    }
+
+    .formularioFiltrado .boton {
+        margin-bottom: 1%;
+        padding: 1% 3%;
+        border-radius: 15px;
+        border: 2px inset var(--color-boton);
+        font-size: 2vh;
+    }
+
+    .formularioFiltrado input,
+    .formularioFiltrado select {
+        margin-bottom: 1%;
+        padding: 0.3% 1%;
+        border-radius: 10px;
+        border: 2px inset var(--color-boton);
+    }
+
+    .formularioFiltrado label {
+        margin-left: 2%;
+    }
+
+    /*________ TABLAS ________*/
+
+    .tabla {
+        width: 80%;
+        border-collapse: collapse;
+        border: none;
+        margin-left: 8%;
+    }
+
+    .tabla th {
+        background-color: var(--color-secundario);
+        padding: 0.7% 0;
+        color: rgb(255, 255, 255);
+    }
+
+    .tabla th:first-of-type {
+        border-radius: 10px 0px 0px 0px;
+    }
+
+    .tabla th:last-of-type {
+        border-radius: 0px 10px 0px 0px;
+    }
+
+    td {
+        text-align: center;
+        background-color: var(--color-letrasClaras);
+        color: white;
+        padding: 0.6% 0;
+    }
+
+    .bAnadir {
+        margin-left: 8%;
+    }
+
+    .imgUsuario {
+        border-radius: 20px;
+        width: 30%;
+    }
+
+    .imgUsuario2 {
+        margin-left: 34%;
+        border-radius: 20px;
+        width: 30%;
+    }
+
+    .imgProducto {
+        border-radius: 30px;
+        width: 15%;
+    }
+
+    .imgProducto2 {
+        border-radius: 30px;
+        width: 20%;
+    }
+
+    /*_______ FILTRADO Productos ________*/
+
+    .formsListaProductos {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .formularioFiltradoProducto {
+        background-color: var(--color-fondo-formu);
+        border: 8px solid var(--color-fondo-formu);
+        border-radius: 15px;
+        margin: 1% 2% 1% 2%;
+        padding: 1.5%;
+        width: 30%;
+    }
+
+
+    .formularioFiltradoProducto input {
+        padding: 1% 2%;
+        border-radius: 5px;
+        border: 2px inset var(--color-boton);
+        font-size: 2vh;
+    }
+
+    .formularioFiltradoProducto .boton {
+        margin-bottom: 1%;
+        padding: 1% 3%;
+        border-radius: 15px;
+        border: 2px inset var(--color-boton);
+        font-size: 2vh;
+    }
+
+    .formularioFiltradoProducto input,
+    .formularioFiltradoProducto select {
+        margin-bottom: 1%;
+        padding: 0.3% 1%;
+        border-radius: 10px;
+        border: 2px inset var(--color-boton);
+    }
+
+    .formularioFiltradoProducto label {
+        margin-left: 2%;
+    }
+
+    .mensaError {
+        color: var(--color-letrasClaras);
+        font-weight: bold;
+    }
+
+    /*___ Tarjetas productos ___*/
+
+    .tarjetaProducto {
+        display: inline-block;
+        width: 19.4%;
+        height: 35%;
+        padding: 1%;
+        margin: 1% 0 1% 2.3%;
+        box-shadow: 2px 2px 2px rgba(71, 17, 17, 0.078);
+        border: 3px solid var(--color-fondo-formu);
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    .precio {
+        color: #5e7e53;
+        font-weight: bold;
+        font-size: 2.7vh;
+
+    }
+
+    .unidades {
+        color: #7e7e7e;
+        font-size: 1.5vh;
+        padding: 1% 2%;
+        border: 1px solid #7e7e7e;
+        border-radius: 10px;
+    }
+
+    .cantidadComprar {
+        width: 30%;
+        border: 2px solid #7e7e7e;
+        padding: 1% 2%;
+        border-radius: 20px;
+    }
+
+    .stock {
+        color: green;
+        font-size: 1.6vh;
+    }
+
+    .ultimasUnidades {
+        color: rgb(196, 89, 8);
+        font-size: 1.6vh;
+    }
+
+    /* _____ Cesta ____*/
+    .tarjetaProductosCesta {
+        display: block;
+        width: 50%;
+        height: 18vh;
+        padding: 1%;
+        margin-left: 20%;
+        box-shadow: 2px 2px 2px rgba(71, 17, 17, 0.078);
+        border: 3px solid var(--color-fondo-formu);
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    .imgProCesta {
+        border-radius: 50px;
+        border: 2px solid var(--color-fondo-formu);
+        margin: 1%;
+        margin-left: 1%;
+        float: left;
+    }
+
+    .nomTituCesta {
+        margin: 2% 0 0 4%;
+        color: var(--color-boton);
+        float: left;
+    }
+
+    .precioProCesta {
+        margin: 4% 0;
+        color: var(--color-letrasClaras);
+    }
+
+    .tarjetaProductosCesta p {
+        margin-top: 1%;
+        margin-right: 30%;
+        float: right;
+        width: 50%;
+    }
+
+    .cantProCesta {
+        padding: 0.5% 0 0.5% 1%;
+        border: 2px solid #7e7e7e;
+        border-radius: 20px;
+        text-align: center;
+        float: right;
+        margin-right: 71%;
+        margin-top: 1.5%;
+    }
+
+    .botonCesta {
+        height: 28px;
+        border-radius: 50px;
+        float: right;
+        margin-right: 66%;
+        margin-top: -3.5%;
+    }
+
+    .botonCesta2 {
+        margin-right: 54%;
+        margin-top: -3.69%;
+    }
+
+    .tarjetaPagoCesta {
+        display: block;
+        width: 50%;
+        padding: 1%;
+        margin-left: 20%;
+        box-shadow: 2px 2px 2px rgba(71, 17, 17, 0.078);
+        border: 3px solid var(--color-fondo-formu);
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    .opcionesPago {
+        border-radius: 20px;
+        padding: 0.5% 1%;
+        border: 1.5px solid grey;
+        margin-bottom: 1%;
+    }
+
+    .letrasRojitas {
+        color:var(--color-letrasClaras);
+    }
+
+    .botonFinalizar {
+        text-align: center;
+        margin-left: 63%;
+        margin-top: 1%;
+    }
+
+    /*________ TICKET _______*/
+
+    .tituTicket{
+        color: green;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .precioProductoResumen {
+        float: right;
+    }
+
+    .tarjetaTicket {
+        display: block;
+        width: 50%;
+        padding: 1%;
+        margin-left: 20%;
+        box-shadow: 2px 2px 2px rgba(71, 17, 17, 0.078);
+        border: 3px solid var(--color-fondo-formu);
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    .tarjetaTicket hr {
+        border-color: #d38181a1;
+    }
+
+    .unidades2 {
+        color: #7e7e7e;
+        font-size: 1.5vh;
+        padding: 0.5% 1%;
+        border: 1px solid #7e7e7e;
+        border-radius: 10px;
+        width: 9%;
+        text-align: center;
+    }
+
+    /*______ MIS COMPRAS _______*/
+
+    .botonInfo {
+        color: var(--color-boton);
+        background-color: var(--color-blanco);
+        border: 2px inset var(--color-secundario);
+        font-size: 2.1vh;
+        padding: 1% 2.5%;
+        border-radius: 10px;
+    }
+
+    .botonInfo:hover {
+        background-color: var(--color-fondo-formu);
+        color: rgb(246, 240, 236);
+        border: 2px inset var(--color-boton);
+        transition: background-color 1s ease, border 1s ease;
+    }

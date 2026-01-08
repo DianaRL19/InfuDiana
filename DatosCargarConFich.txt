@@ -1,0 +1,4 @@
+PRODUCTO: nombre → Tila2, fabricante → Hornimans, nombre_categoria → infusion, precio → 1.815,
+PRODUCTO: nombre → Hinojo2, fabricante → Pompadour, nombre_categoria → infusion, precio → 1.452,
+PRODUCTO: nombre → Manzanilla2, fabricante → Hornimans, nombre_categoria → infusion, precio → 1.815,
+PRODUCTO: nombre → Valeriana2, fabricante → Hornimans, nombre_categoria → infusion, precio → 3.025,
